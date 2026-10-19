@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="web" viewBox="-50 -50 100 100" fill="none" stroke="currentColor" stroke-width="1">
+    <path d="M0 0L0-48M0 0L34-34M0 0L48 0M0 0L34 34M0 0L0 48M0 0L-34 34M0 0L-48 0M0 0L-34-34"/>
+    <path d="M0-14L10-10L14 0L10 10L0 14L-10 10L-14 0L-10-10Z M0-28L20-20L28 0L20 20L0 28L-20 20L-28 0L-20-20Z M0-42L30-30L42 0L30 30L0 42L-30 30L-42 0L-30-30Z"/>
+  </symbol>
+</svg>
+<div class="bg" id="bg" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <svg class="webcorner" aria-hidden="true"><use href="#web"/></svg>
+  <div class="thread" aria-hidden="true"></div>
+  <p class="sub">Your friendly neighbourhood birthday surprise.</p>
+  <h1>Happy Birthday, <span data-bind="name">You</span>! ♡</h1>
+  <button class="gift" id="gift" aria-label="Gift box">
+    <span class="lid"><i class="rib"></i><i class="bow"></i></span>
+    <span class="box"><i class="rib"></i></span>
+    <span class="burst" aria-hidden="true">★ ♡ ✦ ☕ ♪</span>
+  </button>
+  <button class="btn" id="open">Open Your Surprise ↗</button>
+</header>
+
+<main id="experience" hidden>
+<!-- A: INTERESTS -->
+<section id="cards">
+  <h2>A little bit of everything</h2>
+  <div class="grid">
+    <button class="card spidey" data-k="spidey"><span class="art">🕷️</span><b>Spider-Man</b><small>tap me</small><svg class="cw" aria-hidden="true"><use href="#web"/></svg><em class="pop"></em></button>
+    <button class="card coffee" data-k="coffee"><span class="art">☕<i class="steam"></i><i class="steam s2"></i></span><b>Coffee</b><small>tap me</small><em class="pop"></em></button>
+    <button class="card fashion" data-k="fashion"><span class="art">🧥</span><b>Fashion</b><small>tap me</small><div class="swatches"><i></i><i></i><i></i><i></i></div><em class="pop"></em></button>
+    <button class="card guitar" data-k="guitar"><span class="art">🎸</span><b>Guitar</b><small>tap me</small><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i></div><em class="pop"></em></button>
+    <button class="card aesthetic" data-k="aesthetic"><span class="art">✿ ✦ ✿</span><b>Aesthetic things</b><small>tap me</small><em class="pop"></em></button>
+  </div>
+</section>
+
+<!-- B: GALLERY -->
+<section id="gallery">
+  <h2>Moments</h2>
+  <div class="scrap" id="scrap"></div>
+</section>
+
+<!-- C: LETTER -->
+<section id="letter">
+  <h2>A Little Note For You ♡</h2>
+  <button class="envelope" id="env" aria-expanded="false" aria-controls="paper">
+    <span class="flap"></span>
+    <span class="paper" id="paper"><span id="letterText"></span><span class="sig" id="sig"></span></span>
+    <span class="front"></span>
+    <span class="seal">♡</span>
+  </button>
+  <p class="hint" id="envHint">Tap the envelope</p>
+</section>
+
+<!-- D: CAKE -->
+<section id="cake">
+  <h2>Make a wish</h2>
+  <div class="cakewrap" id="cakewrap">
+    <div class="candles"><i></i><i></i><i></i></div>
+    <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+  </div>
+  <button class="btn" id="wish">Make a Wish ✦</button>
+  <p class="wishmsg" id="wishmsg">May this year bring you beautiful surprises, endless laughter, and little moments worth remembering.</p>
+</section>
+
+<!-- E: FINAL -->
+<section id="final">
+  <svg class="webcorner l" aria-hidden="true"><use href="#web"/></svg>
+  <svg class="webcorner r" aria-hidden="true"><use href="#web"/></svg>
+  <p class="big">Some people make ordinary days a little more special. Today is all about celebrating you. ♡</p>
+  <p class="end">Happy Birthday, once again. Stay amazing! ✦</p>
+</section>
+</main>
+
+<dialog id="lb"><button class="x" aria-label="Close photo">✕</button><img alt=""><p></p></dialog>
+<script src="script.js"></script>
+</body>
+</html>
